@@ -26,14 +26,20 @@ export function validateEmail(value) {
 /**
  * 验证密码
  */
-export function validatePass(value){
+export function validatePass(value) {
     let reg = /^(?!\D+$)(?![^a-zA-Z]+$)\S{6,20}$/;
     return !reg.test(value) ? true : false
 }
 /**
  * 验证验证码
  */
-export function validateVCode(value){
+export function validateVCode(value) {
     let reg = /^[a-z0-9]{6}$/;
     return !reg.test(value) ? true : false
 }
+
+
+/**
+ * 没有使用 default 时，可以同时声明多个 export
+ * 文件 import 需要花括号
+ */
